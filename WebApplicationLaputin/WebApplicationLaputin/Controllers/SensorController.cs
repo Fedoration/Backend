@@ -45,7 +45,8 @@ namespace WebApplicationLaputin.Controllers
         [HttpGet("getByType")]
         public IActionResult GetByType(string type)
         {
-            var result = repository.GetByType(type);
+            var result = repository.GetSensorsByType(type).Select(x => (SensorDto) x);
+            var resultDTO = repository.GetByType(type);
 
             if (result == null)
             {

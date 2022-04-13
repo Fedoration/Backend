@@ -79,6 +79,14 @@ namespace WebApplicationLaputin.Repositories
                 .ToArray();
 
         }
+        public IEnumerable<Sensor> GetSensorsByType(string type)
+        {
+            return context.Sensors
+                .Include(x => x.Unit)
+                .Where(x => x.Type == type)               
+                .ToArray();
+
+        }
 
         public IEnumerable<SensorDto> GetByUnitId(int unitid)
         {
