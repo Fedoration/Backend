@@ -79,6 +79,34 @@ namespace WebApplicationLaputin.Repositories
                 .ToArray();
 
         }
+
+        public IEnumerable<SensorDto> GetByUnitName(string unitname)
+        {
+            return context.Sensors
+                .Include(x => x.Unit)
+                .Where(x => x.Unit.Name == unitname)
+                .Select(x => new SensorDto
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Type = x.Type,
+                    Description = x.Description,
+                    Dimension = x.Dimension,
+                    Value = x.Value,
+                    UnitId = x.UnitId,
+                    UnitName = x.Unit.Name
+                })
+                .ToArray();
+        }
+
+        public IEnumerable<Sensor> GetSensorsByUnitName(string unitname)
+        {
+            return context.Sensors
+                .Include(x => x.Unit)
+                .Where(x => x.Unit.Name == unitname)
+                .ToArray();
+        }
+
         public IEnumerable<Sensor> GetSensorsByType(string type)
         {
             return context.Sensors

@@ -70,6 +70,21 @@ namespace WebApplicationLaputin.Controllers
             return Ok(result);
         }
 
+        [Authorize]
+        [HttpGet("getByUnitName")]
+        public IActionResult GetByUnitName(string unitname)
+        {
+            var result = repository.GetSensorsByUnitName(unitname).Select(x => (SensorDto)x);
+            var resultDTO = repository.GetByType(unitname);
+
+            if (result == null)
+            {
+                return BadRequest(result);
+            }
+
+            return Ok(result);
+        }
+
         [Authorize(Roles = "admin")]
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] SensorDto dto)
