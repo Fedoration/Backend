@@ -1,0 +1,397 @@
+{
+	"info": {
+		"_postman_id": "f2ed5ee2-5d23-4db8-b70b-1925cf6b8a18",
+		"name": "labwork2Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get all Units",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Unit/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Unit",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all sensors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQm9yaXMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwibmJmIjoxNjQ5MjM2MzU2LCJleHAiOjE2NDkyMzY2NTYsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6Ik15QXV0aENsaWVudCJ9.laVBosM6oE-Ha29Qjd5v4nLuz6SEyBf5kDHC0JMxnZU",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/ConsumptionSensor/all",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"ConsumptionSensor",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sensor by id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer ",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Valve/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Valve",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sensor by type",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoidXNlcjEiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJ1c2VyIiwibmJmIjoxNjQ5ODQxNDIwLCJleHAiOjE2NDk4NDE3MjAsImlzcyI6Ik15QXV0aFNlcnZlciIsImF1ZCI6Ik15QXV0aENsaWVudCJ9.tM8J9m4nCoc2yDN02_UHScNDo08gZSTI9Wawg4c1FOM",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Sensor/getByType?type=pressure",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Sensor",
+						"getByType"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "pressure"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get sensor by UnitId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicm9vdGFkbWluIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2NDk4NDEzMTAsImV4cCI6MTY0OTg0MTYxMCwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.SXdg7J3pLbZiN5V-in3hFQM5KZ1dqKtnAsOPTlfDhvE",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/Sensor/getByUnitId?unitid=1",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Sensor",
+						"getByUnitId"
+					],
+					"query": [
+						{
+							"key": "unitid",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicXdlcnR5QGdtYWlsLmNvbSIsImh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vd3MvMjAwOC8wNi9pZGVudGl0eS9jbGFpbXMvcm9sZSI6InVzZXIiLCJuYmYiOjE2NDkwOTQxMjYsImV4cCI6MTY0OTA5NDQyNiwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.nm7UTq7S9LSBayX49O-o3TaPvep9p2EzH76luArPutE",
+						"type": "default",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/jso",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://localhost:5001/api/Account/token?username=Boris&password=boris123",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"api",
+						"Account",
+						"token"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Boris"
+						},
+						{
+							"key": "password",
+							"value": "boris123"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add user",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"Login\": \"admin1\",\r\n  \"Password\": \"admin123\",\r\n  \"Role\": \"admin\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/Person",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add unit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Unit",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Unit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add sensor",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicm9vdGFkbWluIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiYWRtaW4iLCJuYmYiOjE2NDk4MzYyMTgsImV4cCI6MTY0OTgzNjUxOCwiaXNzIjoiTXlBdXRoU2VydmVyIiwiYXVkIjoiTXlBdXRoQ2xpZW50In0.koeioop4ljgcBdPgj-P8ZQ6I7dYctpAxrwEKUPSMEfg",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \"cons_sensor 1\",\r\n    \"Type\": \"consumption\",\r\n    \"Description\": \"no\",\r\n    \"Dimension\": \"m3/h\",\r\n    \"Value\": 200,\r\n    \"UnitName\": \"First Unit\"\r\n}"
+				},
+				"url": {
+					"raw": "https://localhost:5001/Sensor",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Sensor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add valve",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Valve",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Valve"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit valve",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "0.5"
+				},
+				"url": {
+					"raw": "https://localhost:5001/change-value/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"change-value",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:5001/Person/9",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"Person",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete pressure sensor",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:5001/PressureSensor/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"PressureSensor",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
